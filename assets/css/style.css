@@ -1,55 +1,289 @@
 /* Start Global Rules */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 * {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  :root {
-    --main-color: #242f51;
-    --main-color-alt: #2500f9;
-    --pargraph-color: #616368;
-    --container-padding: 100px;
-    --section-padding-top: 100px;
-    --section-padding-bottom: 100px;
-    --main-transition: 0.3s;
-  }
-  html {
-    scroll-behavior: smooth;
-  }
-  body {
-    font-family: 'Poppins', sans-serif;
-  }
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --main-color: #242f51;
+  --main-color-alt: #2500f9;
+  --pargraph-color: #616368;
+  --container-padding: 30px;
+  --section-padding-top: 50px;
+  --section-padding-bottom: 50px;
+  --main-transition: 0.3s;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+}
+.container {
+  padding-right: var(--container-padding);
+  padding-left: var(--container-padding);
+  margin-right: auto;
+  margin-left: auto;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+/* Small */
+@media (min-width: 768px) {
   .container {
-    padding-right: var(--container-padding);
-    padding-left: var(--container-padding);
-    margin-right: auto;
-    margin-left: auto;
+    width: 750px;
   }
-  ul {
-    list-style: none;
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
   }
-  a {
-    text-decoration: none;
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
   }
-  /* Small */
-  @media (min-width: 768px) {
-    .container {
-      width: 750px;
-    }
+}
+/* End Global Rules */
+/* Start Header */
+body > .landing {
+  padding-top: 30px;
+  height: 100vh;
+  background-image: url(/assets/imgs/Landing\ BG.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+@media (max-width: 991px) {
+  body > .landing {
+    background-size: cover;
   }
-  /* Medium */
-  @media (min-width: 992px) {
-    .container {
-      width: 970px;
-    }
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo img {
+  width: 110px;
+}
+header div:not(.mobile-links) {
+  display: flex;
+  align-items: center;
+}
+header div:not(.mobile-links) .links {
+  display: flex;
+}
+@media (max-width: 991px) {
+  header div:not(.mobile-links) .links {
+    display: none;
   }
-  /* Large */
-  @media (min-width: 1200px) {
-    .container {
-      width: 1170px;
-    }
+}
+header div:not(.mobile-links) .links li {
+  margin-right: 40px;
+}
+header div:not(.mobile-links) .links li a {
+  color: var(--main-color);
+  font-weight: 400;
+  transition: var(--main-transition);
+}
+header div:not(.mobile-links) .links li a:hover {
+  color: rgb(34, 0, 226);
+}
+header div:not(.mobile-links) .links li.active a {
+  color: rgb(34, 0, 226);
+}
+header div:not(.mobile-links) > a {
+  color: white;
+  font-weight: 700;
+  background-color: var(--main-color-alt);
+  padding: 10px 20px;
+  border-radius: 50px;
+  transition: var(--main-transition);
+  user-select: none;
+}
+@media (max-width: 991px) {
+  header div:not(.mobile-links) > a {
+    display: none;
   }
-  /* End Global Rules */
+}
+header div:not(.mobile-links) > a:hover {
+  background-color: #2100db;
+}
+header .mobile-links {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  background-color: var(--main-color);
+  height: 100vh;
+  width: 200px;
+  padding: 20px;
+  z-index: 9999;
+  transition: 0.5s;
+}
+header .mobile-links.open {
+  right: 0;
+}
+@media (max-width: 991px) {
+  header .mobile-links {
+    display: block;
+  }
+}
+header .mobile-links .links {
+  margin-bottom: 20px;
+  padding-top: 35px;
+}
+header .mobile-links .links li {
+  padding: 10px;
+  transition: var(--main-transition);
+}
+header .mobile-links .links li:hover {
+  padding-left: 15px;
+}
+header .mobile-links .links li a {
+  color: white;
+}
+header .mobile-links > a {
+  color: white;
+  font-weight: 700;
+  background-color: var(--main-color-alt);
+  padding: 10px 20px;
+  border-radius: 50px;
+  transition: var(--main-transition);
+}
+header .mobile-links > a:hover {
+  background-color: #2100db;
+}
+header .mobile-links .close {
+  cursor: pointer;
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 40px;
+  right: 15px;
+}
+header .bars {
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  right: 15px;
+  font-size: 20px;
+}
+@media (max-width: 991px) {
+  header .bars {
+    display: block;
+  }
+}
+/* End Header */
+/* Start Landing */
+.landing .landing {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.landing .landing .intro-text {
+  width: 650px;
+}
+@media (max-width: 991px) {
+  .landing .landing .intro-text {
+    text-align: center;
+    padding-top: 30px;
+  }
+}
+.landing .landing .intro-text span {
+  background-color: #e2eaed;
+  padding: 4px 45px;
+  border-radius: 50px;
+  position: relative;
+  color: var(--main-color);
+  font-weight: 400;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.landing .landing .intro-text span::before {
+  content: url(/assets/imgs/Landing\ Icon.png);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 39px;
+  height: 35px;
+}
+.landing .landing .intro-text .m-text {
+  font-size: 60px;
+  color: var(--main-color);
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 0;
+}
+@media (max-width: 767px) {
+  .landing .landing .intro-text .m-text {
+    font-size: 50px;
+  }
+}
+@media (max-width: 400px) {
+  .landing .landing .intro-text .m-text {
+    font-size: 40px;
+  }
+}
+@media (max-width: 320px) {
+  .landing .landing .intro-text .m-text {
+    font-size: 30px;
+  }
+}
+.landing .landing .intro-text p {
+  color: var(--pargraph-color);
+  font-weight: 400;
+  font-size: 18px;
+  width: 500px;
+  margin: 10px 0 35px;
+}
+@media (max-width: 991px) {
+  .landing .landing .intro-text p {
+    width: fit-content;
+  }
+}
+@media (max-width: 767px) {
+  .landing .landing .intro-text p {
+    font-size: 15px;
+  }
+}
+.landing .landing .intro-text .try {
+  color: white;
+  font-weight: 700;
+  background-color: var(--main-color-alt);
+  padding: 10px 20px;
+  border-radius: 50px;
+  transition: var(--main-transition);
+  margin-right: 20px;
+}
+@media (max-width: 400px) {
+  .landing .landing .intro-text .try {
+    display: block;
+    margin: 0 0 10px;
+  }
+}
+.landing .landing .intro-text .try:not(.mobile-links):hover {
+  background-color: #2100db;
+}
+.landing .landing .intro-text a:not(.try) {
+  color: var(--main-color-alt);
+  font-weight: 400;
+}
+.landing .landing > img {
+  width: 300px;
+}
+@media (max-width: 991px) {
+  .landing .landing > img {
+    display: none;
+  }
+}
+/* End Landing */
