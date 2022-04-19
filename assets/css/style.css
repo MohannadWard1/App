@@ -53,19 +53,33 @@ a {
   }
 }
 /* End Global Rules */
+/* Start Component */
+.title {
+  color: var(--main-color);
+  line-height: 1.4;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+.parg {
+  margin-bottom: 80px;
+  color: var(--pargraph-color);
+  line-height: 1.5;
+  font-weight: 400;
+}
+/* End Component */
 /* Start Header */
 body > .landing {
   padding-top: 30px;
   height: 100vh;
   background-image: url(/assets/imgs/Landing\ BG.png);
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-size: contain;
 }
-@media (max-width: 991px) {
+/* @media (max-width: 991px) {
   body > .landing {
     background-size: cover;
   }
-}
+} */
 header {
   display: flex;
   justify-content: space-between;
@@ -124,7 +138,7 @@ header .mobile-links {
   right: -100%;
   background-color: var(--main-color);
   height: 100vh;
-  width: 200px;
+  width: 250px;
   padding: 20px;
   z-index: 9999;
   transition: 0.5s;
@@ -146,6 +160,9 @@ header .mobile-links .links li {
   transition: var(--main-transition);
 }
 header .mobile-links .links li:hover {
+  padding-left: 15px;
+}
+header .mobile-links .links li.active {
   padding-left: 15px;
 }
 header .mobile-links .links li a {
@@ -287,3 +304,116 @@ header .bars {
   }
 }
 /* End Landing */
+/* Start Companies */
+.comp {
+  padding-top: var(--section-padding-top);
+  padding-bottom: var(--section-padding-bottom);
+}
+.comp .container {
+  text-align: center;
+}
+.comp .container span {
+  color: var(--main-color);
+  font-weight: 400;
+  display: block;
+  margin-bottom: 20px;
+}
+.comp .container .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px 60px;
+}
+.comp .container .content img {
+  width: 130px;
+}
+/* End Companies */
+/* Start Feats */
+.feats {
+  padding-top: var(--section-padding-top);
+  padding-bottom: var(--section-padding-bottom);
+}
+.feats .container {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+.feats .container > img {
+  width: 450px;
+}
+@media (max-width: 991px) {
+  .feats .container > img {
+    display: none;
+  }
+}
+@media (max-width: 991px) {
+  .feats .container .content {
+    text-align: center;
+  }
+}
+.feats .container .content .feat {
+  display: flex;
+  width: 400px;
+  align-items: center;
+  margin-bottom: 50px;
+}
+@media (max-width: 991px) {
+  .feats .container .content .feat {
+    display: block;
+    margin: 0 auto;
+    width: 500px;
+    margin-bottom: 30px;
+  }
+}
+.feats .container .content .feat img {
+  margin-right: 25px;
+}
+@media (max-width: 991px) {
+  .feats .container .content .feat img {
+    margin: 0 0 10px;
+  }
+}
+.feats .container .content .feat .text span {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 10px;
+}
+.feats .container .content .feat .text p {
+  color: var(--pargraph-color);
+  font-weight: 400;
+  line-height: 1.5;
+}
+/* End Feats */
+.top {
+  padding: 10px;
+  position: fixed;
+  bottom: -100%;
+  right: 20px;
+  border: none;
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+  background-color: var(--main-color);
+  transition: 0.5s;
+}
+.top.show {
+  bottom: 20px;
+}
+.top::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: #1e2844;
+  transition: var(--main-transition);
+  z-index: -1;
+}
+.top:hover:before {
+  width: 100%;
+}
+.top i {
+  color: white;
+}
