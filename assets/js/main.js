@@ -1,5 +1,5 @@
 let lis = document.querySelectorAll("header div:not(.mobile-links) .links li");
-console.log(lis);
+
 lis.forEach((li) => {
   li.addEventListener("click", function (e) {
     lis.forEach((li) => {

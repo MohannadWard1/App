@@ -59,6 +59,7 @@ a {
   line-height: 1.4;
   margin-bottom: 20px;
   font-weight: 600;
+  font-size: 40px;
 }
 .parg {
   margin-bottom: 80px;
@@ -70,16 +71,10 @@ a {
 /* Start Header */
 body > .landing {
   padding-top: 30px;
-  height: 100vh;
   background-image: url(/assets/imgs/Landing\ BG.png);
   background-repeat: repeat;
   background-size: contain;
 }
-/* @media (max-width: 991px) {
-  body > .landing {
-    background-size: cover;
-  }
-} */
 header {
   display: flex;
   justify-content: space-between;
@@ -193,6 +188,7 @@ header .bars {
   position: absolute;
   right: 15px;
   font-size: 20px;
+  color: var(--main-color);
 }
 @media (max-width: 991px) {
   header .bars {
@@ -212,7 +208,7 @@ header .bars {
 @media (max-width: 991px) {
   .landing .landing .intro-text {
     text-align: center;
-    padding-top: 30px;
+    padding: 30px;
   }
 }
 .landing .landing .intro-text span {
@@ -385,6 +381,61 @@ header .bars {
   line-height: 1.5;
 }
 /* End Feats */
+/* Start Smart */
+.smart {
+  padding-top: var(--section-padding-top);
+  padding-bottom: var(--section-padding-bottom);
+}
+.smart .container .title-text {
+  display: flex;
+  align-items: center;
+  margin-bottom: 60px;
+}
+.smart .container .title-text .title {
+  width: 450px;
+  position: relative;
+}
+.smart .container .title-text .title::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -40px;
+  width: 1px;
+  height: 100%;
+  background-color: #b9b9b8;
+}
+.smart .container .title-text p {
+  width: 450px;
+  line-height: 1.6;
+  color: var(--pargraph-color);
+  font-weight: 400;
+  margin-left: 80px;
+  font-size: 18px;
+}
+.smart .container .content {
+  display: flex;
+  justify-content: space-between;
+}
+.smart .container .content .feat {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+.smart .container .content .feat .icon {
+  width: 80px;
+  margin-bottom: 25px;
+}
+.smart .container .content .feat span {
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+.smart .container .content .feat p {
+  color: var(--pargraph-color);
+  font-weight: 400;
+  line-height: 1.6;
+}
+/* End Smart */
+/* Start Scrool Button */
 .top {
   padding: 10px;
   position: fixed;
@@ -417,3 +468,4 @@ header .bars {
 .top i {
   color: white;
 }
+/* End Scrool Button */
