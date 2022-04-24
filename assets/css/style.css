@@ -470,6 +470,51 @@ header .bars {
   line-height: 1.6;
 }
 /* End Smart */
+/* Start Code */
+.code {
+  padding-top: var(--section-padding-top);
+  padding-bottom: var(--section-padding-bottom);
+}
+.code .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 100px;
+}
+.code .container img {
+  width: 500px;
+}
+@media (max-width: 991px) {
+  .code .container img {
+    display: none;
+  }
+}
+@media (max-width: 991px) {
+  .code .container .content {
+    text-align: center;
+  }
+}
+.code .container .content .title {
+  font-size: 50px;
+  margin: 0;
+}
+.code .container .content p {
+  margin: 20px 0 40px;
+  font-weight: 400;
+  color: var(--pargraph-color);
+}
+.code .container .content a {
+  background-color: var(--main-color-alt);
+  padding: 10px 20px;
+  color: white;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: var(--main-transition);
+}
+.code .container .content a:hover {
+  background-color: #2100db;
+}
+/* End Code */
 /* Start Scrool Button */
 .top {
   padding: 10px;
