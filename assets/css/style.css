@@ -12,8 +12,8 @@
   --main-color-alt: #2500f9;
   --pargraph-color: #616368;
   --container-padding: 30px;
-  --section-padding-top: 50px;
-  --section-padding-bottom: 50px;
+  --section-padding-top: 80px;
+  --section-padding-bottom: 80px;
   --main-transition: 0.3s;
 }
 html {
@@ -53,7 +53,7 @@ a {
   }
 }
 /* End Global Rules */
-/* Start Component */
+/* Start Components */
 .title {
   color: var(--main-color);
   line-height: 1.4;
@@ -67,7 +67,7 @@ a {
   line-height: 1.5;
   font-weight: 400;
 }
-/* End Component */
+/* End Components */
 /* Start Header */
 body > .landing {
   padding-top: 30px;
@@ -560,6 +560,110 @@ header .bars {
   font-size: 15px;
 }
 /* End Choose */
+/* Start Ultimate Features */
+.ulti-feats {
+  padding-top: var(--section-padding-top);
+  padding-bottom: var(--section-padding-bottom);
+}
+@media (max-width: 1200px) {
+  .ulti-feats .title {
+    text-align: center;
+  }
+}
+.ulti-feats .parg {
+  margin-bottom: 0;
+}
+@media (max-width: 1200px) {
+  .ulti-feats .parg {
+    text-align: center;
+  }
+}
+@media (max-width: 991px) {
+  .ulti-feats .parg {
+    margin-bottom: 50px;
+  }
+}
+.ulti-feats .container .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 1200px) {
+  .ulti-feats .container .content {
+    flex-direction: column;
+  }
+}
+.ulti-feats .container .content .feats {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 50px;
+  width: 600px;
+  padding: 0;
+}
+@media (max-width: 1200px) {
+  .ulti-feats .container .content .feats {
+    order: 2;
+  }
+}
+.ulti-feats .container .content .feats .feat {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+}
+@media (max-width: 1200px) {
+  .ulti-feats .container .content .feats .feat {
+    align-items: center;
+    text-align: center;
+  }
+}
+.ulti-feats .container .content .feats .feat img {
+  width: 80px;
+  margin-bottom: 20px;
+}
+.ulti-feats .container .content .feats .feat span {
+  font-weight: 600;
+  color: var(--main-color);
+  margin-bottom: 10px;
+}
+.ulti-feats .container .content .feats .feat p {
+  width: 250px;
+  color: var(--pargraph-color);
+  line-height: 1.6;
+  font-size: 15px;
+}
+.ulti-feats .container .content > img {
+  height: 580px;
+}
+@media (max-width: 1200px) {
+  .ulti-feats .container .content > img {
+    order: 1;
+    margin: 50px 0;
+  }
+}
+@media (max-width: 991px) {
+  .ulti-feats .container .content > img {
+    display: none;
+  }
+}
+.ulti-feats .container > a {
+  background-color: var(--main-color-alt);
+  color: white;
+  padding: 10px 35px;
+  font-weight: 600;
+  border-radius: 50px;
+  display: block;
+  width: fit-content;
+  transition: var(--main-transition);
+}
+.ulti-feats .container > a:hover {
+  background-color: #2201df;
+}
+@media (max-width: 1200px) {
+  .ulti-feats .container > a {
+    margin: 40px auto 0;
+  }
+}
+/* End Ultimate Features */
 /* Start Scrool Button */
 .top {
   padding: 10px;
@@ -571,7 +675,7 @@ header .bars {
   width: 35px;
   height: 35px;
   background-color: var(--main-color);
-  transition: 0.5s;
+  transition: 0.7s;
 }
 .top.show {
   bottom: 20px;
