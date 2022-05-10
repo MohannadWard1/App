@@ -1,3 +1,4 @@
+// Desktop Menu
 let lis = document.querySelectorAll("header div:not(.mobile-links) .links li");
 
 lis.forEach((li) => {
@@ -9,6 +10,7 @@ lis.forEach((li) => {
   });
 });
 
+// Mobile Menu
 let mobileLinks = document.querySelector("header .mobile-links");
 let mobLis = document.querySelectorAll("header .mobile-links .links li");
 let free = document.querySelector("header .mobile-links > a");
@@ -34,6 +36,24 @@ free.addEventListener("click", function () {
   mobileLinks.classList.remove("open");
 });
 
+// Awesome Features Filter
+let filters = document.querySelectorAll(".awe-feats .container .content .filter ul li");
+let cards = document.querySelectorAll(".awe-feats .container .content .cards .card");
+
+filters.forEach((filter) => {
+  filter.addEventListener("click", function (e) {
+    filters.forEach((filter) => {
+      filter.classList.remove("active");
+    })
+    e.currentTarget.classList.add("active");
+    cards.forEach((card) => {
+      card.style.display = "none";
+    })
+    document.querySelector(e.currentTarget.dataset.cat).style.display = "block";
+  })
+})
+
+// Scroll To Top Button
 let btn = document.querySelector(".top");
 
 window.onscroll = function () {

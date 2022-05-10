@@ -21,6 +21,7 @@ html {
 }
 body {
   font-family: 'Poppins', sans-serif;
+  background-color: white;
 }
 .container {
   padding-right: var(--container-padding);
@@ -380,6 +381,12 @@ header .bars {
   font-weight: 400;
   line-height: 1.5;
 }
+@media (max-width: 624px) {
+  .feats .container .content .feat .text p {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}
 /* End Feats */
 /* Start Smart */
 .smart {
@@ -538,6 +545,12 @@ header .bars {
     justify-content: center;
   }
 }
+@media (max-width: 624px) {
+  .choose .container .content {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .choose .container .content .feat {
   width: 250px;
   display: flex;
@@ -605,6 +618,14 @@ header .bars {
     order: 2;
   }
 }
+@media (max-width: 624px) {
+  .ulti-feats .container .content .feats {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
 .ulti-feats .container .content .feats .feat {
   display: flex;
   flex-direction: column;
@@ -664,6 +685,108 @@ header .bars {
   }
 }
 /* End Ultimate Features */
+/* Start Awesome Features */
+.awe-feats {
+  padding-top: var(--section-padding-top);
+  padding-bottom: var(--section-padding-bottom);
+}
+.awe-feats .container {
+  text-align: center;
+}
+.awe-feats .container .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.awe-feats .container .content .filter ul {
+  display: flex;
+  justify-content: center;
+  padding: 3px;
+  border: 1px solid #ebebeb;
+  border-radius: 50px;
+  width: fit-content;
+  margin-bottom: 50px;
+}
+.awe-feats .container .content .filter ul li {
+  padding: 10px 15px;
+  color: var(--pargraph-color);
+  font-weight: 400;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: var(--main-transition);
+}
+.awe-feats .container .content .filter ul li.active {
+  color: white;
+  font-weight: 600;
+  background-color: var(--main-color-alt);
+}
+.awe-feats .container .content .cards {
+  display: flex;
+  gap: 30px;
+}
+.awe-feats .container .content .cards .card {
+  background-color: white;
+  padding: 0 0 10px;
+  border-radius: 6px;
+  height: fit-content;
+  box-shadow: 0 0 80px 0 rgb(0 0 0 / 8%);
+  transition: 0.5s;
+  display: none;
+  min-width: 300px;
+}
+.awe-feats .container .content .cards .card.show {
+  display: block;
+}
+.awe-feats .container .content .cards .card > .price {
+  background: linear-gradient(to top, #f4f7f9, rgba(255, 255, 255, 0));
+  padding: 40px 50px;
+}
+.awe-feats .container .content .cards .card > .price .price {
+  font-size: 60px;
+  color: var(--main-color);
+  font-weight: 600;
+  display: block;
+  margin-bottom: 20px;
+}
+.awe-feats .container .content .cards .card > .price .price span {
+  font-size: 15px;
+  color: #999ca5;
+}
+.awe-feats .container .content .cards .card > .price .cat {
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--main-color);
+  margin-bottom: 8px;
+}
+.awe-feats .container .content .cards .card > .price p {
+  color: #9fa2ab;
+}
+.awe-feats .container .content .cards .card .feats span {
+  display: block;
+  padding: 20px;
+  color: #999ca5;
+}
+.awe-feats .container .content .cards .card .buy {
+  background-color: var(--main-color-alt);
+  display: block;
+  padding: 15px 25px;
+  color: white;
+  font-weight: 600;
+  width: fit-content;
+  margin: 0 auto 15px;
+  border-radius: 50px;
+  transition: var(--main-transition);
+}
+.awe-feats .container .content .cards .card .buy:hover {
+  background-color: #2100dd;
+}
+.awe-feats .container .content .cards .card .trial {
+  color: #2500f9;
+  display: block;
+  margin-bottom: 10px;
+}
+/* End Awesome Features */
 /* Start Scrool Button */
 .top {
   padding: 10px;
