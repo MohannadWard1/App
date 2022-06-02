@@ -787,6 +787,76 @@ header .bars {
   margin-bottom: 10px;
 }
 /* End Awesome Features */
+/* Start Meet Client */
+.meet {
+  padding-top: var(--section-padding-top);
+  padding-bottom: var(--section-padding-bottom);
+}
+.meet .container {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+.meet .container > img {
+  width: 550px;
+}
+.meet .container .content > .parg,
+.meet .container .content .rating {
+  margin-bottom: 30px;
+}
+.meet .container .content > .title {
+  font-size: 25px;
+}
+.meet .container .content .comments {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.meet .container .content .comments .details {
+  display: flex;
+  align-items: center;
+}
+.meet .container .content .comments .details * {
+  height: fit-content;
+}
+.meet .container .content .comments .details img {
+  margin-right: 10px;
+}
+.meet .container .content .comments .details .text {
+  display: flex;
+  flex-direction: column;
+}
+.meet .container .content .comments .details .text .title {
+  font-size: 18px;
+  margin: 0 0 8px;
+}
+.meet .container .content .comments .details .text .parg {
+  margin: 0;
+}
+.meet .container .content .comments .arrows {
+  width: 120px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.meet .container .content .comments .arrows::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 1px;
+  height: 50%;
+  background-color: #ccc;
+}
+.meet .container .content .comments .arrows img {
+  cursor: pointer;
+  transition: 0.3s;
+}
+.meet .container .content .comments .arrows img:hover {
+  opacity: 0.7;
+}
+/* End Meet Client */
 /* Start Scrool Button */
 .top {
   padding: 10px;
