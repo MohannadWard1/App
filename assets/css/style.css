@@ -1032,6 +1032,50 @@ header .bars {
   }
 }
 /* End Download */
+/* Start Footer */
+footer {
+  padding-top: var(--section-padding-top);
+  padding-bottom: var(--section-padding-bottom);
+  background-color: #09142e;
+}
+footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer .container .logo {
+  width: 120px;
+  margin-bottom: 30px;
+}
+footer .container .links {
+  display: flex;
+  margin-bottom: 30px;
+}
+footer .container .links li {
+  margin-right: 20px;
+}
+footer .container .links li a {
+  color: white;
+}
+footer .container .social {
+  margin-bottom: 50px;
+}
+footer .container .social a {
+  margin-right: 15px;
+  color: white;
+  opacity: 0.1;
+  transition: var(--main-transition);
+}
+footer .container .social a:hover {
+  opacity: 1;
+}
+footer .container .social a i {
+  font-size: 23px;
+}
+footer .container span {
+  color: var(--pargraph-color);
+}
+/* End Footer */
 /* Start Scrool Button */
 .top {
   padding: 10px;
