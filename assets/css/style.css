@@ -797,8 +797,18 @@ header .bars {
   gap: 30px;
   align-items: center;
 }
+@media (max-width: 1121px) {
+  .meet .container {
+    text-align: center;
+  }
+}
 .meet .container > img {
   width: 550px;
+}
+@media (max-width: 1121px) {
+  .meet .container > img {
+    display: none;
+  }
 }
 .meet .container .content > .parg,
 .meet .container .content .rating {
@@ -811,6 +821,12 @@ header .bars {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+@media (max-width: 1121px) {
+  .meet .container .content .comments {
+    width: 500px;
+    margin: 0 auto;
+  }
 }
 .meet .container .content .comments .details {
   display: flex;
