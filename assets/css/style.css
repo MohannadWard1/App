@@ -878,9 +878,6 @@ header .bars {
   padding-top: var(--section-padding-top);
   padding-bottom: var(--section-padding-bottom);
 }
-.a-q .container {
-  
-}
 .a-q .container > .title,
 .a-q .container > .parg {
   text-align: center;
@@ -975,6 +972,66 @@ header .bars {
   margin: 20px 0 0;
 }
 /* End Asked Questions */
+/* Start Download */
+.download {
+  padding-top: var(--section-padding-top);
+  padding-bottom: var(--section-padding-bottom);
+}
+.download .container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+@media (max-width: 1121px) {
+  .download .container {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+@media (max-width: 991px) {
+  .download .container {
+    text-align: center;
+  }
+}
+@media (max-width: 1121px) {
+  .download .container div:first-child {
+    order: 2;
+  }
+}
+@media (max-width: 750px) {
+  .download .container div:first-child .title {
+    font-size: 25px;
+  }
+}
+.download .container div:first-child .parg {
+  width: 650px;
+  margin-bottom: 40px;
+}
+@media (max-width: 750px) {
+  .download .container div:first-child .parg {
+    font-size: 12px;
+  }
+}
+@media (max-width: 750px) {
+  .download .container div:first-child div img {
+    width: 150px;
+  }
+}
+.download .container .image img {
+  width: 550px;
+  max-width: 100%;
+}
+@media (max-width: 1121px) {
+  .download .container .image img {
+    order: 1;
+  }
+}
+@media (max-width: 991px) {
+  .download .container .image img {
+    display: none;
+  }
+}
+/* End Download */
 /* Start Scrool Button */
 .top {
   padding: 10px;
