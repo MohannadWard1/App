@@ -53,6 +53,14 @@ filters.forEach((filter) => {
   })
 })
 
+// Frequently asked questions show questions
+let boxs = document.querySelectorAll(".a-q .container .questions .box");
+
+boxs.forEach((box) => {
+  box.addEventListener("click", function () {
+    box.classList.toggle("active");
+  })
+})
 // Scroll To Top Button
 let btn = document.querySelector(".top");
 
